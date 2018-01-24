@@ -66,7 +66,7 @@ class Solution3:
             j += 1
         nextCenter = j
 
-        while i >= 9 and j < self.n and s[i] == s[j]:
+        while i >= 0 and j < self.n and s[i] == s[j]:
             i -= 1
             j += 1
 
