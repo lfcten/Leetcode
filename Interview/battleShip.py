@@ -1,5 +1,7 @@
 import sys
-
+"""
+在线编辑器又是python2.7。。。
+"""
 m = int(sys.stdin.readline().strip())
 n = int(sys.stdin.readline().strip())
 matrix = [[0] * n for _ in range(m)]
