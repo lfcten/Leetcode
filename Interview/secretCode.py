@@ -12,8 +12,10 @@ def main(num, secretCode):
     total = sum(secretCode)
     for i in range(num - 1):
         target = total / (num - i)
-        ind = bisect.bisect(secretCode, target)
-        if abs(secretCode[ind] - target) >= abs(secretCode[ind - 1] - target):
+        ind = bisect.bisect_left(secretCode, target)
+        if secretCode[ind] == target:
+            val = secretCode.pop(ind)
+        elif abs(secretCode[ind] - target) >= abs(secretCode[ind - 1] - target):
             val = secretCode.pop(ind - 1)
         else:
             val = secretCode.pop(ind)
